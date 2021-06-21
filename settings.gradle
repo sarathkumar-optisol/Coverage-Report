@@ -1,2 +1,3 @@
 rootProject.name = "Coverage Report"
 include ':app'
+include ':mylibrary'
