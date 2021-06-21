@@ -19,6 +19,24 @@ buildscript {
     }
 }
 
+plugins {
+    id "org.sonarqube" version "3.2.0"
+}
+
+sonarqube {
+    properties {
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.login", "75495c5c15806c3aa0a63f108abce582f3a757c9"
+        property "sonar.projectKey", "com.vsahin.coveragereport"
+        property "sonar.coverage.jacoco.xmlReportPaths", [
+                "${rootDir}/app/build/jacoco/jacoco.xml", //unit tests,
+                "${rootDir}/app/build/reports/coverage/debug/report.xml", //ui tests
+                "${rootDir}/mylibrary/build/jacoco/jacoco.xml", //unit tests library
+                "${rootDir}/mylibrary/build/reports/coverage/debug/report.xml", //ui tests library
+        ]
+    }
+}
+
 allprojects {
     repositories {
         google()
