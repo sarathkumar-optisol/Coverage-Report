@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: "com.hiya.jacoco-android"
+
 android {
     compileSdkVersion 30
 
