@@ -12,6 +12,6 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun utilsTest() {
-        assertEquals(2, Utils().getNumberCoveredByTests())
+        assertEquals(1, Utils().getNumberCoveredByTests())
     }
 }
